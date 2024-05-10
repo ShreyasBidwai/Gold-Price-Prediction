@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Price Forecast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Set background color to white */
+            color: #333; /* Set text color to dark gray */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            position :absoulte;
+            background-color: white; /* Set container background color */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        }
+        h1 {
+            text-align: center;
+            justify-content: center;
+            color: #333; /* Set heading color */
+        }
+        h2{
+            margin-top: 10px;
+            display: inline-flex;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-weight: 300;
+        }
+        .graph-container {
+            justify-content: center;
+            text-align: center; /* Center align graph */
+            margin-bottom: 20px;
+            height: 100%;
+            width: 100%;
+        }
+        .average-card {
+            display: inline-flex;
+            background-color: #ffffff; /* Set card background color to white */
+            padding: 30px;
+            /* margin-right: 5px; */
+            margin: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+            transition: box-shadow 0.3s ease;
+            cursor: pointer; /* Add pointer cursor on hover */
+            height:100px;
+            width:200px;
+            /* text-align: center; */
+            flex-direction: column;
+            align-items: center;
+        }
+        .average-card:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+            background-color:#bde0fe
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Price Forecast</h1>
+        
+
+        <div class="graph-container">
+            {{ graph|safe }}
+        </div>
+        
+
+        <div class="card-container">
+            <div class="average-card" style="margin-left:11px">
+                <h2>Past 3 Months Average</h2>
+                <p>{{ past_3_months_average }}</p>
+            </div>
+            <div class="average-card">
+                <h2>Past 6 Months Average</h2>
+                <p>{{ past_6_months_average }}</p>
+            </div>
+            <div class="average-card">
+                <h2>Forecasted 3 Months Average</h2>
+                <p>{{ forecasted_3_months_average }}</p>
+            </div>
+            <div class="average-card">
+                <h2>Forecasted 6 Months Average</h2>
+                <p>{{ forecasted_6_months_average }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
