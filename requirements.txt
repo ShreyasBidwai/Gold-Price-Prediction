@@ -1,5 +1,6 @@
 streamlit
 Django
+gunicorn
 pandas==2.2.3
 numpy==2.2.4
 anyio==4.9.0
