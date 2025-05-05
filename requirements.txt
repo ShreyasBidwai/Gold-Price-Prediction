@@ -1,5 +1,6 @@
 streamlit
 Django
+django
 pandas
 numpy
 anyio==4.9.0
